@@ -3,7 +3,24 @@ grammar org.xtext.example.mydsl.Insurance with org.eclipse.xtext.common.Terminal
 generate insurance "http://www.xtext.org/example/mydsl/Insurance"
 
 Model:
-	greetings+=Greeting*;
+	products+=Product*;
 	
-Greeting:
-	'Hello' name=ID '!';
+Product:
+	'Produkt' name=ID '{'
+		'OPIS=' description=STRING
+		'SREDNIE ODSZKODOWANIE=' avgDamages=INT
+		'CZESTOSC ZDARZEN NA 1000=' occurrences=INT
+		'OCZEKIWANY ZYSK (%)=' earnings=INT
+		'KOSZT OBSLUGI (szt)=' cost=INT
+	
+		'W SPRZEDAZY=' selling=YesNo
+		('POWIAZANE PRODUKTY='(connected+=[Product]* ))?
+	'}'
+	;
+
+YesNo:
+	"TAK" | "NIE"
+;
+
+
+
