@@ -19,6 +19,7 @@ class InsuranceGenerator implements IGenerator {
 		}
 		fsa.generateFile("index.html",generateIndex(resource.allContents.toIterable.filter(typeof(Product))));
 	}
+	
 	def generateIndex(Iterable<Product> products) { 
 		'''<html><head></head><body>
 		<table>
@@ -54,7 +55,7 @@ class InsuranceGenerator implements IGenerator {
 	'''
 	}
 	
-	def float getPrice(Product product) { 
+	def getPrice(Product product) { 
 		return ((product.avgDamages * product.occurrences / 1000 + product.cost)* (1+product.earnings) );
 	}
 

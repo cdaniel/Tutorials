@@ -18,7 +18,6 @@ public class InsuranceProposalProvider extends AbstractInsuranceProposalProvider
 			ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		acceptor.accept(createCompletionProposal("TAK", context));
 		acceptor.accept(createCompletionProposal("NIE", context));
-		super.complete_YesNo(model, ruleCall, context, acceptor);
 	}
 
 }

@@ -1,0 +1,36 @@
+SMAP
+InsuranceGenerator.java
+Xtend
+*S Xtend
+*F
++ 0 InsuranceGenerator.xtend
+src/org/xtext/example/mydsl/generator/InsuranceGenerator.xtend
+*L
+15:16,4
+16:20,3
+17:23,4
+16:27
+15:28
+20:29,5
+23:37
+24:38,5
+23:43
+26:44,10
+29:54,11
+23:65
+32:66,6
+33:72,4
+23:76
+34:77,4
+23:81,2
+36:83,7
+23:90,2
+39:92,5
+24:97
+45:101,10
+50:111,6
+51:117,6
+52:123,8
+45:131
+59:135,9
+*E
