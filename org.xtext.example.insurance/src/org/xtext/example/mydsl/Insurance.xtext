@@ -1,0 +1,9 @@
+grammar org.xtext.example.mydsl.Insurance with org.eclipse.xtext.common.Terminals
+
+generate insurance "http://www.xtext.org/example/mydsl/Insurance"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
